@@ -24,7 +24,9 @@ const { conn } = require('./src/db.js');
 console.log(`process.env es...`)
 console.log(`process.env PORT`)
 console.log(process.env.PORT)
-const port = process.env.PORT || 29295 // 3001
+console.log(`process.env COMPLETO es...`)
+console.log(process.env )
+const port = process.env.PORT || 3001 // 3001
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
