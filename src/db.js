@@ -1,3 +1,4 @@
+console.log('ENTRANDO A DATABASE')
 require("dotenv").config();
 const { Sequelize } = require("sequelize");
 const fs = require("fs");
