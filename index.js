@@ -27,7 +27,7 @@ console.log(process.env.PORT)
 console.log(`process.env COMPLETO es...`)
 console.log(process.env )
 const port = process.env.PORT || 3001 // 3001
-
+console.log("PORT NO ES..-")
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
   console.log(`ENTRANDO A CONN.SYNC`)
