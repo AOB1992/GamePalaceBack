@@ -4,7 +4,7 @@ const { Sequelize } = require("sequelize");
 const fs = require("fs");
 const path = require("path");
 //const Historiccart = require("./models/Historiccart");
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_DEPLOY } = process.env;
+const { DB_USER, DB_PASSWORD, DB_HOST, DB_DEPLOY, DB_URL } = process.env;
 console.log('2ENTRANDO A DATABASE')
 // const sequelize = new Sequelize(
 //   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/GamePalace`,
@@ -15,7 +15,7 @@ console.log('2ENTRANDO A DATABASE')
 // );
 const sequelize = new Sequelize(
  // DB_DEPLOY,
-  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/railway`,
+  DB_URL,
   {
     logging: false, // set to console.log to see the raw SQL queries
     native: false, // lets Sequelize know we can use pg-native for ~30% more speed
