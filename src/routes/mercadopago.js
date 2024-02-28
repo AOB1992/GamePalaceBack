@@ -1,10 +1,11 @@
+console.log("entrando a mercadopago.js")
 const { Router } = require("express");
 const mercadopago = require("mercadopago");
 const router = Router();
 require("dotenv").config();
 MERCADOPAGO_KEY = "TEST-7243261396680960-020318-90f04e08ecb5b9150bffd30a7efb7eb5-214413477"
 mercadopago.configure({ access_token: process.env.MERCADOPAGO_KEY });
-console.log("entrando a mercadopago.js")
+console.log("2entrando a mercadopago.js")
 router.post("/", (req, res) => {
   const prod = req.body;
   let preference = {
@@ -18,7 +19,7 @@ router.post("/", (req, res) => {
     auto_return: "approved",
     binary_mode: true, //no permite un pending, pending sería pago en efectivo, ejemplo rapipago.
   };
-
+console.log("3entrando a mercadopago.js")
   prod?.forEach((prod) => {
     preference.items.push({
       title: prod.title,
