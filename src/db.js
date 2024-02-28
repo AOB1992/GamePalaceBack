@@ -5,7 +5,7 @@ const fs = require("fs");
 const path = require("path");
 //const Historiccart = require("./models/Historiccart");
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_DEPLOY } = process.env;
-
+console.log('2ENTRANDO A DATABASE')
 // const sequelize = new Sequelize(
 //   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/GamePalace`,
 //   {
@@ -21,6 +21,7 @@ const sequelize = new Sequelize(
     native: false, // lets Sequelize know we can use pg-native for ~30% more speed
   }
 );
+console.log('3ENTRANDO A DATABASE')
 const basename = path.basename(__filename);
 
 const modelDefiners = [];
