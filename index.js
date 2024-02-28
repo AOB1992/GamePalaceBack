@@ -1,3 +1,4 @@
+console.log(`entrando a INDEX.JS`)
 const { searchresults } = require('./src/utils/index.js');
 //                       _oo0oo_
 //                      o8888888o
@@ -20,7 +21,10 @@ const { searchresults } = require('./src/utils/index.js');
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-const port = process.env.PORT || 3001
+console.log(`process.env es...`)
+console.log(`process.env PORT`)
+console.log(process.env.PORT)
+const port = process.env.PORT || 29295 // 3001
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
