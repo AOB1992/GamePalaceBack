@@ -1,3 +1,4 @@
+console.log ("entrand  a nodemailer.js")
 const { Products, Category } = require("../db"); //database
 const { Router } = require("express");
 const router = Router();
@@ -7,11 +8,12 @@ const {
     nmailer,
   
   } = require("../controllers/nodemailerController");
+console.log ("2requiere entrand  a nodemailer.js")
 const Mail = require("nodemailer/lib/mailer");
 const { post } = require("./products");
   
 
-console.log ("entrand  a nodemailer.js")
+console.log ("3 entrand  a nodemailer.js")
 
 router.post ("/", async (req, res) => {
     console.log ("entrando  POST DE  a nodemailer.js")
